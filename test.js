@@ -1,0 +1,1 @@
+const sayhi=() => console.log("hello world");
