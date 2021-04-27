@@ -8,7 +8,7 @@ import Context from "./AppContext"
 
 
 function App() {
-  const [querries,setQuerries] = useState("")
+  const [querries,setQuerries] = useState([])
 
   return (<Context.Provider value={{querries,setQuerries}}>
     <Router>

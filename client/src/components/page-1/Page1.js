@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import SearchBar from "./SearchBar"
 import DisplayFeature from "./Displayfeature"
 import Context from "../../AppContext"
+import Table from "./Table"
 
 // use context.
 
@@ -9,17 +10,19 @@ const Page1 =()=>{
     const [data,setData] = useState({})
     const context = useContext(Context)
 
-    
 
     const handleClick = async(inputRef,searchParamRef)=>{
         const newdata = {
             inputRef,searchParamRef
         }
-        console.log(context.querries)
-        setData(newdata)
-        const key = localStorage.length
-        // item been striglified has to be converted back when acquired back
-        localStorage.setItem(key,JSON.stringify(newdata))
+        // console.log(context.querries)
+        // setData(newdata)
+        // const key = localStorage.length
+        // const x = context.querries
+        // x.push("hello")
+        // await context.setQuerries(x)
+        // console.log(context.querries)
+
     }
     
     useEffect(()=>{
@@ -28,10 +31,9 @@ const Page1 =()=>{
 
 
     return <div className="page1">
-        {async()=>await context.setQuerries("hello")}
         <h1>Hackton App ,translate MDN</h1>
         <SearchBar handleClick={handleClick}/>
-        <DisplayFeature/>
+        <Table givenData={data}/>        
     </div>
 }
 
