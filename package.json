@@ -1,4 +1,5 @@
 {
+
   "dependencies": {
     "axios": "^0.21.1",
     "concurrently": "^6.0.2",
@@ -7,7 +8,9 @@
     "express": "^4.17.1",
     "mongoose": "^5.12.5",
     "path": "^0.12.7",
-    "validator": "^13.6.0"
+    "validator": "^13.6.0",
+    "puppeteer": "^9.0.0"
+
   },
   "name": "living-together-hackathon",
   "version": "1.0.0",
@@ -28,6 +31,5 @@
   "bugs": {
     "url": "https://github.com/marwa2021-d/hackathon/issues"
   },
-  "homepage": "https://github.com/marwa2021-d/hackathon#readme",
-  "description": ""
+  "homepage": "https://github.com/marwa2021-d/hackathon#readme"
 }
