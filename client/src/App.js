@@ -2,7 +2,7 @@ import './App.css';
 import Page1 from "./components/page-1/Page1";
 import Page2 from "./components/page-2/Page-2"
 import React from "react"
-import { Route, Switch, BrowserRouter as Router, Link } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 
 function App() {

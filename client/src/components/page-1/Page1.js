@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import SearchBar from "./SearchBar"
+import DisplayFeature from "./Displayfeature"
 
 const Page1 =()=>{
     const [data,setData] = useState({})
@@ -17,10 +18,10 @@ const Page1 =()=>{
     },[data])
 
 
-    return <>
-        <h1>first page</h1>
+    return <div className="page1">
         <SearchBar handleClick={handleClick}/>
-    </>
+        <DisplayFeature/>
+    </div>
 }
 
 export default Page1
