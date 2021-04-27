@@ -19,6 +19,7 @@ const Page1 =()=>{
 
 
     return <div className="page1">
+        <h1>Hackton App ,translate MDN</h1>
         <SearchBar handleClick={handleClick}/>
         <DisplayFeature/>
     </div>

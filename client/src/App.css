@@ -1,6 +1,8 @@
 .page1{
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .searchbar ul{
@@ -20,5 +22,40 @@
   width: 10rem;
 }
 
+.page1 table tr img{
+  height:120px;
+  width: 120px;
+}
 
+.displayfeature{
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
+  justify-content: center;
+  align-items: center;
+}
 
+.slider{
+  background-color: crimson;
+  width: 20rem;
+  padding: 2rem;
+  width: 40rem;
+}
+
+.carrousel button{
+  background-color: black;
+  color: aqua;
+}
+
+.carrousel table tr td,.carrousel table tr th{
+  border: 1px solid black;
+}
+
+.carrousel table tr td{
+  width: 26rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,8 +1,9 @@
 import React from "react"
+import Carrousel from "../page-1/Carrousel"
 
 const Page2 =()=>{
     return <>
-        <h1>Second page</h1>
+        <Carrousel/>
     </>
 }
 
