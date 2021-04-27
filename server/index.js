@@ -6,7 +6,7 @@ const route = require('./routers/index.router');
 const PORT = process.env.PORT || 8000;
 
 app.use(express.json())
-
+app.use(cors())
 app.use('/api/', route);
 
 app.listen(PORT, () => {
