@@ -2,7 +2,8 @@ const express = require('express')
 const app = express();
 const path = require('path');
 require('./db/mongoose');
-const route = require('./routers/index.router');
+const route = require('./rourers/index.router');
+const cors = require('cors')
 
 const PORT = process.env.PORT || 8000;
 
