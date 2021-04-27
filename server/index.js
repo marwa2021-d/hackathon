@@ -2,13 +2,19 @@ const express = require('express')
 const app = express();
 const path = require('path');
 require('./db/mongoose');
-const route = require('./routers/index.router');
+const route = require('./rourers/index.router');
 
-const PORT = process.env.PORT || 8000;
+const cors = require('cors')
+require('dotenv').config()
+
+const PORT = process.env.PORT;
 
 app.use(express.json())
 app.use(cors())
 app.use('/api/', route);
+app.use((req, res) => {
+    res.status(404).send('Error: Something went wrong... try again')
+})
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/*', (req, res) => {
