@@ -1,27 +1,40 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import SearchBar from "./SearchBar"
 import DisplayFeature from "./Displayfeature"
+
 import api from '../../api/api'
 
 
-const Page1 = () => {
-    const [data, setData] = useState({})
+import Context from "../../AppContext"
+import Table from "./Table"
 
+
+
+const Page1 =()=>{
+    const [data,setData] = useState({})
+    const context = useContext(Context)
+    
     //*********************************** */
     const [value, setValue] = useState('')
     //*********************************** */
 
-    const handleClick = (inputRef, searchParamRef) => {
+    const handleClick = async(inputRef,searchParamRef)=>{
+
         const newdata = {
             inputRef, searchParamRef
         }
-        setData(newdata)
     }
-
-    useEffect(() => {
+        // console.log(context.querries)
+        // setData(newdata)
+        // const key = localStorage.length
+        // const x = context.querries
+        // x.push("hello")
+        // await context.setQuerries(x)
+        // console.log(context.querries)
+    
+    useEffect(()=>{
         console.log(data)
-
-    }, [data])
+    },[data])
 
 
     //*********************************** */
@@ -37,6 +50,7 @@ const Page1 = () => {
 
 
     return <div className="page1">
+
         <SearchBar handleClick={handleClick} />
 
         {/*  */}
@@ -45,7 +59,11 @@ const Page1 = () => {
         <button onClick={postFunc}>post</button>
         {/*  */}
 
-        <DisplayFeature />
+ 
+        <h1>Hackton App ,translate MDN</h1>
+        <SearchBar handleClick={handleClick}/>
+        <Table givenData={data}/>        
+
     </div>
 }
 
