@@ -7,7 +7,7 @@ router
         const test = new dataObj({
             originalData: {
                 link: "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector",
-                lang: "english",
+                lang: "en",
                 rawData: {
                     title: "Document.querySelector()",
                     content: "The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned."
@@ -15,7 +15,7 @@ router
             },
             translatedData: {
                 isTranslated: true,
-                lang: "hebrew",
+                lang: "he",
                 rawData: {
                     title: "יקשדכחשגד",
                     content: `חנדגשלכחדנגשכלחגנשדלהחמדשלה 
