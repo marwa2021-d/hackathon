@@ -1,0 +1,24 @@
+.page1{
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchbar ul{
+  list-style: none;
+}
+
+.searchbar ul li input{
+  width: 30rem;
+}
+
+.searchbar ul li select{
+  width: 10rem;
+}
+
+
+
