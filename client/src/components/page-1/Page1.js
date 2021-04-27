@@ -49,22 +49,26 @@ const Page1 =()=>{
     //*********************************** */
 
 
-    return <div className="page1">
+    return (
+    <div className="page1">
 
-        <SearchBar handleClick={handleClick} />
+        <div className="content-wrapper">
 
-        {/*  */}
-        <button onClick={fetchFunc}>fetch</button>
-        <input value={value} onChange={(e) => setValue(e.target.value)}></input>
-        <button onClick={postFunc}>post</button>
-        {/*  */}
+            <div className="heading-wrapper">
 
- 
-        <h1>Hackton App ,translate MDN</h1>
-        <SearchBar handleClick={handleClick}/>
-        <Table givenData={data}/>        
+                <h1>&ensp;MDN Translator&ensp;</h1>
+                <SearchBar handleClick={handleClick}/>
+
+            </div>
+
+            <div className="table-wrapper">
+                <Table givenData={data}/>  
+            </div> 
+
+        </div>
 
     </div>
+    );
 }
 
 export default Page1

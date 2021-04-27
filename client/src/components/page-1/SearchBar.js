@@ -10,13 +10,14 @@ const SearchBar = (props)=>{
             </li>
             <li>
                 <select ref={searchParamRef}>
+                    <option disabled selected value> -- select a language -- </option>
                     <option value="Hebrew">Hebrew</option>
                     <option value="Arabic">Arabic</option>
                     <option value="English">English</option>
                 </select>
             </li>
             <li>
-                <button onClick={()=>props.handleClick(searchParamRef.current.value,inputRef.current.value)}>submit</button>
+                <button className="submit-button" onClick={()=>props.handleClick(searchParamRef.current.value,inputRef.current.value)}>submit</button>
             </li>
         </ul>
     </header>
