@@ -1,0 +1,17 @@
+important p tags for the scraping:
+
+.jobs-details-top-card__job-title = title of the job
+
+.jobs-details-top-card__company-logo = image of the firms logo
+
+.jobs-details-top-card__bullet = job location
+
+.jobs-details-job-summary__text--ellipsis = job scope
+
+.jobs-details-job-summary__text--ellipsis = company's size
+
+.jobs-poster__name t-14 t-black t-bold mb0 = publisher's name
+
+.EntityPhoto-circle-5-ghost-person jobs-poster__photo lazy-image ember-view = publisher's pic
+
+
