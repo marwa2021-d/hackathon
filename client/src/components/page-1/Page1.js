@@ -23,6 +23,7 @@ const Page1 = () => {
 
     }, [data])
 
+
     //*********************************** */
     const fetchFunc = async () => {
         const fetch = await api.get('/')
@@ -33,6 +34,7 @@ const Page1 = () => {
         console.log(fetch.config.data)
     }
     //*********************************** */
+
 
     return <div className="page1">
         <SearchBar handleClick={handleClick} />

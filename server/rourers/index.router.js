@@ -4,8 +4,28 @@ const dataObj = require('../models/dataObj.model')
 
 router
     .get("/", async (req, res) => {
+        const test = new dataObj({
+            originalData: {
+                link: "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector",
+                lang: "english",
+                rawData: {
+                    title: "Document.querySelector()",
+                    content: "The Document method querySelector() returns the first Element within the document that matches the specified selector, or group of selectors. If no matches are found, null is returned."
+                },
+            },
+            translatedData: {
+                isTranslated: true,
+                lang: "hebrew",
+                rawData: {
+                    title: "יקשדכחשגד",
+                    content: `חנדגשלכחדנגשכלחגנשדלהחמדשלה 
+                    שדלחהמשדהל חמש
+                    ש,דחמדלףחהמ`
+                },
+            }
+        })
         try {
-            res.send('fetch is work')
+            res.send(test)
         } catch (e) {
             res.status(400).send(e.message)
         }
@@ -19,5 +39,8 @@ router
             res.status(400).send(e.message)
         }
     })
+
+
+
 
 module.exports = router;
