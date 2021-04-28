@@ -2,6 +2,9 @@
 /************************* General *********************************/
 /******************************************************************/
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +19,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/********************************************************************/
+/************************** Header *********************************/
+/******************************************************************/
 
 .app-header {
   position: fixed;
@@ -32,18 +39,27 @@ body {
   align-items: center;
   width: 100vw;
   height: 5rem;
+  list-style-type: none;
 }
 
-/* .app-header ul li {
-  display: flex;
-  align-items: center;
-} */
+.app-header li {
+  padding: 1.5rem;
+}
+
+.app-header li:hover {
+  background-color: rgb(36, 79, 116);
+}
 
 li a {
   list-style: none;
   color: white;
   font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
 }
+
+/********************************************************************/
+/************************** Page 1 *********************************/
+/******************************************************************/
 
 .page1 {
   display: flex;
@@ -52,26 +68,87 @@ li a {
   align-items: center;
 }
 
-.searchbar ul {
+.content-wrapper {
   display: flex;
+  padding-bottom: 10vh;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 12vh;
+  width: 80vw;
+  min-height: 80vh;
+  background-color: rgba(102, 159, 173, 0.8);
 }
 
-.searchbar ul {
-  list-style: none;
+.heading-wrapper {
+  background-color: rgb(255, 255, 255);
+  width: 70vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem;
 }
 
-.searchbar ul li input {
-  width: 30rem;
-}
-
-.searchbar ul li select {
-  width: 10rem;
+.heading-wrapper h1 {
+  margin-bottom: 2rem;
+  font-family: "Zilla Slab Highlight", cursive;
+  font-size: 3.5rem;
+  font-weight: 400;
 }
 
 .page1 table tr img {
   height: 120px;
   width: 120px;
+}
+
+.searchbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchbar ul li input,
+.searchbar ul li select {
+  width: 40vw;
+  height: 1.2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.searchbar ul li select {
+  width: 10rem;
+  margin-left: 1rem;
+}
+
+.searchbar .submit-button {
+  width: fit-content;
+  padding: 0.3rem;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(243, 252, 255);
+  border: 1px solid darkgrey;
+  box-shadow: 1px 1px 3px darkgrey;
+  border-radius: 3px;
+}
+
+.searchbar .submit-button:hover {
+  width: fit-content;
+  padding: 0.3rem;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(50, 57, 59);
+  color: white;
+  border: 1px solid darkgrey;
+  box-shadow: 1px 1px 3px darkgrey;
+  border-radius: 3px;
 }
 
 .displayfeature {
@@ -108,4 +185,50 @@ li a {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+table {
+  width: 50vw;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+}
+
+table th {
+  font-size: 1.7rem;
+  color: rgb(21, 47, 70);
+  font-family: "Montserrat", sans-serif;
+  background-color: #83d0f2;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  width: fit-content;
+}
+
+table tr {
+  background-color: rgb(222, 239, 245);
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 0.2rem;
+  text-align: center;
+  border-collapse: collapse;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+table tr:nth-child(even) {
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  margin: 0.2rem;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+table td:hover {
+  background-color: wheat;
 }

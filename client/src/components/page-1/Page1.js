@@ -46,19 +46,26 @@ const Page1 =()=>{
     //*********************************** */
 
 
-    return <div className="page1">
+    return (
+    <div className="page1">
 
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
-        <h1>Hackton App ,translate MDN</h1>
+        <div className="content-wrapper">
 
-        <SearchBar handleClick={handleClick}/>
-        <Table givenData={data} tableClick ={tableClick}/>
+            <div className="heading-wrapper">
+
+                <h1>&ensp;MDN Translator&ensp;</h1>
+                <SearchBar handleClick={handleClick}/>
+
+            </div>
+
+            <div className="table-wrapper">
+                <Table givenData={data}/>  
+            </div> 
+
+        </div>
 
     </div>
+    );
 }
 
 export default Page1

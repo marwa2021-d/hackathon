@@ -18,17 +18,17 @@ function App() {
         <ul>
           <li>
             <Link to="/" style={{ textDecoration: "none" }}>
-            home
+            Home
             </Link>
           </li>
           <li>
           <Link to="/page2" style={{ textDecoration: "none" }}>
-              translated links
+              Translated Links
             </Link>
           </li>
           <li>
           <Link to="/page3" style={{ textDecoration: "none" }}>
-                awaiting links
+                Pending Links
             </Link>
           </li>
         </ul>
