@@ -5,6 +5,7 @@ import Page3 from "./components/page-3/Page3"
 import React, { useState } from "react"
 import { Route, Switch, BrowserRouter as Router, Link } from "react-router-dom";
 import Context from "./AppContext"
+
 import SpecificData from "./components/specificComp/SpecificData"
 
 

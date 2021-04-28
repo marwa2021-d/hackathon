@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const  Carrousel =(props)=> {
+
     const data = props.data
 
     const handleClick =()=>{
@@ -15,6 +16,7 @@ const  Carrousel =(props)=> {
         console.log(props.givenData.translatedData[0].rawData.content)
 
     }
+
     let count = 0
     const settings = {
       dots: true,
@@ -24,6 +26,7 @@ const  Carrousel =(props)=> {
       slidesToScroll: 1
     };
     return (
+
         <div className="carrousel">
           <button onClick ={handleClick}>xxxxxxxxxxxx</button>
           <Slider {...settings} className="slider">

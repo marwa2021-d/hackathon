@@ -6,11 +6,14 @@ import api from '../../api/api'
 
 
 import Context from "../../AppContext"
+
 import Table from "../utils/Table"
 
 
 
+
 const Page1 =()=>{
+
 
     const [data,setData] = useState([])
     const context = useContext(Context)
@@ -31,7 +34,20 @@ const Page1 =()=>{
 
 
 
+    //*********************************** */
+    const fetchFunc = async () => {
+        const fetch = await api.get('/')
+        console.log(fetch.data)
+    }
+    const postFunc = async () => {
+        const fetch = await api.post('/', { name: value })
+        console.log(fetch.config.data)
+    }
+    //*********************************** */
+
+
     return <div className="page1">
+
            <br></br>
            <br></br>
            <br></br>
@@ -41,7 +57,6 @@ const Page1 =()=>{
 
         <SearchBar handleClick={handleClick}/>
         <Table givenData={data} tableClick ={tableClick}/>
-
 
     </div>
 }
