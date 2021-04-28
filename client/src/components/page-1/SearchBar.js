@@ -1,7 +1,6 @@
 import React, { useRef } from "react"
 
 const SearchBar = (props)=>{
-    const searchParamRef = useRef("")
     const inputRef = useRef("")
     return<header className="searchbar">
         <ul>
@@ -22,5 +21,14 @@ const SearchBar = (props)=>{
         </ul>
     </header>
 }
+
+{/* <li>
+<select ref={searchParamRef}>
+    <option value="Hebrew">Hebrew</option>
+    <option value="Arabic">Arabic</option>
+    <option value="English">English</option>
+</select>
+</li> */}
+
 
 export default SearchBar

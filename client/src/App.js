@@ -6,6 +6,8 @@ import React, { useState } from "react"
 import { Route, Switch, BrowserRouter as Router, Link } from "react-router-dom";
 import Context from "./AppContext"
 
+import SpecificData from "./components/specificComp/SpecificData"
+
 
 function App() {
   const [querries,setQuerries] = useState([])
@@ -35,6 +37,7 @@ function App() {
           <Route path="/" exact component={Page1} />
           <Route path="/page2" exact component={Page2} />
           <Route path="/page3" exact component={Page3} />
+          <Route path="/translation/:id" exact component ={SpecificData}/>
         </Switch>
     </Router>
       </Context.Provider>
