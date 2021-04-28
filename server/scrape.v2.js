@@ -10,21 +10,26 @@ const scrape = async (url) => {
     const data = await page.evaluate(() => {
 
         let result = {};
+        try {
 
-        result.title = document.querySelector('h1').innerText;
 
-        result.description = document.querySelector('article').children[1].children[1].innerText;
-        
-        return result;
+            result.title = document.querySelector('h1').innerText;
+
+            result.description = document.querySelector('article').children[1].children[1].innerText;
+
+            return result;
+        } catch (e) {
+            throw new Error(e)
+        }
     })
     console.log(data);
 
     await browser.close();
-    
+
     return data;
+
 };
 
-module.exports = {
-    scrape: scrape,
-}
+module.exports = scrape;
+
 

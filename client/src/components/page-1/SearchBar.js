@@ -8,7 +8,15 @@ const SearchBar = (props)=>{
                 <input type="text" placeholder="insert Url for translation" ref={inputRef}></input>
             </li>
             <li>
-                <button onClick={()=>props.handleClick(inputRef.current.value)}>submit</button>
+                <select ref={searchParamRef}>
+                    <option disabled selected value> -- select a language -- </option>
+                    <option value="Hebrew">Hebrew</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="English">English</option>
+                </select>
+            </li>
+            <li>
+                <button className="submit-button" onClick={()=>props.handleClick(searchParamRef.current.value,inputRef.current.value)}>submit</button>
             </li>
         </ul>
     </header>

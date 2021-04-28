@@ -5,6 +5,7 @@ import Page3 from "./components/page-3/Page3"
 import React, { useState } from "react"
 import { Route, Switch, BrowserRouter as Router, Link } from "react-router-dom";
 import Context from "./AppContext"
+
 import SpecificData from "./components/specificComp/SpecificData"
 
 
@@ -17,17 +18,17 @@ function App() {
         <ul>
           <li>
             <Link to="/" style={{ textDecoration: "none" }}>
-            home
+            Home
             </Link>
           </li>
           <li>
           <Link to="/page2" style={{ textDecoration: "none" }}>
-              translated links
+              Translated Links
             </Link>
           </li>
           <li>
           <Link to="/page3" style={{ textDecoration: "none" }}>
-                awaiting links
+                Pending Links
             </Link>
           </li>
         </ul>
