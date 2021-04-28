@@ -1,6 +1,8 @@
-const express = require("express");
-const router = express.Router();
-const dataObj = require("../models/dataObj.model");
+
+const express = require("express")
+const router = express.Router()
+const dataObj = require('../models/dataObj.model')
+
 
 // get all non translated
 
